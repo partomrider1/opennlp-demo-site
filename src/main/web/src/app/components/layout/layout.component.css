@@ -1,0 +1,51 @@
+ul, li, header {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+header {
+    padding: 15px;
+    border-bottom: 2px solid #b8bfe6;
+}
+
+header i {
+    padding: 10px;
+    cursor: pointer;
+}
+
+header > span {
+    margin-left: 20px;
+    font-size: x-large;
+}
+
+.mat-drawer-container {
+    height: 100%;
+    min-height: 720px;
+    overflow: auto;
+}
+
+.mat-drawer-container  ul {
+    list-style-type: none;
+    padding-right: 40px;
+}
+
+.mat-drawer-container  ul li{
+    padding: 5px;
+}
+
+.mat-drawer-container  ul li:hover{
+    cursor: pointer;
+    background-color: #eaecf8;
+}
+
+.mat-drawer-inner-container {
+    padding: 5px;
+}
+
+.mat-drawer.mat-drawer-side {
+    width: 25%;
+    border-right: 2px solid #b8bfe6;
+}
+
+.mat-drawer-content {
+    padding: 20px;
+}

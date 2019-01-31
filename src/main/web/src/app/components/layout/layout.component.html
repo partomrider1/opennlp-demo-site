@@ -1,0 +1,19 @@
+<header>
+  <i class='material-icons' (click)='toggleSideNav()'>menu</i>
+  <span>Open NLP</span>
+</header>
+<mat-sidenav-container class="side-container">
+  <mat-sidenav #sideNav mode="side" opened>
+    <ul>
+      <li>Sentence Detection</li>
+      <li>Tokenization</li>
+      <li>Name Entity Recognition</li>
+      <li>Finding Parts Of Speech</li>
+      <li>Parsing The Sentences</li>
+      <li>Chunking Sentences</li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-user-io></app-user-io>
+  </mat-sidenav-content>
+</mat-sidenav-container>
