@@ -4,13 +4,10 @@
 </header>
 <mat-sidenav-container class="side-container">
   <mat-sidenav #sideNav mode="side" opened>
-    <ul>
-      <li>Sentence Detection</li>
-      <li>Tokenization</li>
-      <li>Name Entity Recognition</li>
-      <li>Finding Parts Of Speech</li>
-      <li>Parsing The Sentences</li>
-      <li>Chunking Sentences</li>
+    <ul #optionsList>
+      <li *ngFor="let option of OptionElems; let i = index" (click)="handleListClick($event)">
+        {{option}}
+      </li>
     </ul>
   </mat-sidenav>
   <mat-sidenav-content>

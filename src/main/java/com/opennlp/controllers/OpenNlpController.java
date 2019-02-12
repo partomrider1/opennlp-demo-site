@@ -15,7 +15,7 @@ public class OpenNlpController {
   @Autowired
   private OpenNlpService nlpService;
 
-  @PostMapping("/sentences")
+  @PostMapping("/api/sentences")
   @ResponseBody
   public NLPResponse detectSentences(@RequestBody NLPRequest request) {
     NLPResponse nlpResponse = new NLPResponse();
