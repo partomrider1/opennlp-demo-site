@@ -1,6 +1,6 @@
 <header>
   <i class='material-icons' (click)='toggleSideNav()'>menu</i>
-  <span>Open NLP</span>
+  <span>Open NLP</span><span #optionSelect class="hidden"> > <i class="header-sub-text">{{activeOption}}</i></span>
 </header>
 <mat-sidenav-container class="side-container">
   <mat-sidenav #sideNav mode="side" opened>

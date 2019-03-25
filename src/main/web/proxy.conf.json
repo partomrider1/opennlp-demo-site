@@ -1,8 +1,8 @@
 {
     "/api/*": {
-      "target": "http://localhost:8081/api",
+      "target": "http://localhost:8081/api/nlp",
       "secure": false,
       "changeOrigin": true,
-      "pathRewrite" : {"^/api" : "http://localhost:8080/api"}
+      "pathRewrite" : {"^/api" : "http://localhost:8080/api/nlp"}
     }
 }

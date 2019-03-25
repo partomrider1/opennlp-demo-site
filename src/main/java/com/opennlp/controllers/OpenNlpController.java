@@ -11,7 +11,7 @@ import com.opennlp.domain.NLPResponse;
 import com.opennlp.services.OpenNlpService;
 
 @RestController
-@RequestMapping("/nlp")
+@RequestMapping("/api/nlp")
 public class OpenNlpController {
 
   @Autowired

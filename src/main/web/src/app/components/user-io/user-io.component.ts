@@ -32,10 +32,21 @@ export class UserIoComponent implements OnInit {
     let prop = this.globalEventService.getSelectedFeature();
     this.subscriptions.push(this.nlpAggregatorService.getParsedSentences(prop, text)
     .then(response => {
-      this.renderer.setProperty(this.result.nativeElement, 'innerHTML', JSON.stringify(response['response']));
+      this.renderer.setProperty(this.result.nativeElement, 'innerHTML', this.renderResults(response['response']));
     })
     .catch(error => console.log(JSON.stringify(error)))
     );
+  }
+
+  renderResults(resultArr) {
+    let responseHTML = '';
+    for(let i = 0; i < resultArr.length; i++) {
+      responseHTML += i + ' : ' + resultArr[i];
+      if(i !== resultArr.length - 1) {
+        responseHTML += '<br /><br />';
+      }
+    }
+    return responseHTML;
   }
 
 }

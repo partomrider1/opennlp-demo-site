@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverUrl: 'http://localhost:8081/api',
+  serverUrl: 'http://localhost:8081/api/nlp',
   placeholders: {
     'Sentence Detection': `//Loading sentence detector model\nInputStream inputStream = new FileInputStream("C:/OpenNLP_models/en-sent.bin");\nSentenceModel model = new SentenceModel(inputStream); 
 \n//Instantiating the SentenceDetectorME class\nSentenceDetectorME detector = new SentenceDetectorME(model);\n\n//Detecting the sentence\nString sentences[] = detector.sentDetect(sentence); `,

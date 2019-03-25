@@ -8,7 +8,10 @@ export class NlpAggregatorService {
 
     private Sentence_Parser_URL = environment.serverUrl + '/sentences';
     private Server_URL_Map = {
-        'Sentence Detection' : environment.serverUrl + '/sentences'
+        'Sentence Detection' : environment.serverUrl + '/sentences',
+        'Tokenization' : environment.serverUrl + '/tokens',
+        'Name Entity Recognition' : environment.serverUrl + '/NER',
+        'Finding Parts Of Speech' : environment.serverUrl + '/POSTags'
     }
 
     constructor(private http: HttpClient) {

@@ -29,7 +29,7 @@ header > span {
 }
 
 .mat-drawer-container  ul li{
-    padding: 5px;
+    padding: 5px 15px;
 }
 
 .mat-drawer-container  ul li:hover{
@@ -53,4 +53,12 @@ header > span {
 
 .mat-drawer-content {
     padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.header-sub-text {
+    font-size: 18px;
 }
