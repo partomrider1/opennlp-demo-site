@@ -49,4 +49,20 @@ public class OpenNlpController {
     return nlpResponse;
   }
 
+  @PostMapping("/chunks")
+  @ResponseBody
+  public NLPResponse detectSentenceChunks(@RequestBody NLPRequest request) {
+    NLPResponse nlpResponse = new NLPResponse();
+    nlpResponse.setResponse(nlpService.detectSentenceChunks(request.getText()));
+    return nlpResponse;
+  }
+
+  @PostMapping("/nounPhrases")
+  @ResponseBody
+  public NLPResponse detectNounPhrases(@RequestBody NLPRequest request) {
+    NLPResponse nlpResponse = new NLPResponse();
+    nlpResponse.setResponse(nlpService.detectNounPhrases(request.getText()));
+    return nlpResponse;
+  }
+
 }

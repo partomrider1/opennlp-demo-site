@@ -41,4 +41,18 @@ public class OpenNlpService {
     String[] ner = new String[names.size()];
     return names.toArray(ner);
   }
+
+  public String[] detectSentenceChunks(String text) {
+    String [] tokens = this.detectTokens(text);
+    String [] tags = openNLPLoader.getPosTaggerME().tag(tokens);
+    String [] chunks = openNLPLoader.getChunkerME().chunk(tokens, tags);
+    return chunks;
+  }
+
+  public String[] detectNounPhrases(String text) {
+    List<String> phrases = openNLPLoader.getNounPhrases(text);
+    String[] phraseArray = new String [phrases.size()];
+    return phrases.toArray(phraseArray);
+  }
+
 }
