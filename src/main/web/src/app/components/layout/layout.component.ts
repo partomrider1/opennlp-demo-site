@@ -11,7 +11,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
   @ViewChild ('sideNav') sideNav;
   @ViewChild('optionsList') optionsList;
   @ViewChild('optionSelect') optionSelect;
-  OptionElems = ['Sentence Detection', 'Tokenization', 'Name Entity Recognition', 'Finding Parts Of Speech', 'Parsing The Sentences', 'Chunking Sentences'];
+  OptionElems = ['Sentence Detection', 'Tokenization', 'Name Entity Recognition', 'Finding Parts Of Speech', 'Chunking Sentences'];
   activeOption = 'Sentence Detection';
   constructor(private globalEventService: GlobalEventService) { }
 

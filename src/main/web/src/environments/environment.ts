@@ -14,8 +14,6 @@ export const environment = {
     'Finding Parts Of Speech': `//Loading Parts of speech-maxent model\nInputStream inputStream = new FileInputStream("C:/OpenNLP_models/en-pos-maxent.bin");\nPOSModel model = new POSModel(inputStream);
 \n//Instantiating POSTaggerME class\nPOSTaggerME tagger = new POSTaggerME(model);\n\n//Tokenizing the sentence using WhitespaceTokenizer class\nWhitespaceTokenizer whitespaceTokenizer= WhitespaceTokenizer.INSTANCE;
 String[] tokens = whitespaceTokenizer.tokenize(sentence);\n\n//Generating tags\nString[] tags = tagger.tag(tokens);`,
-    'Parsing The Sentences': `//Loading parser model\nInputStream inputStream = new FileInputStream(".../en-parserchunking.bin");\nParserModel model = new ParserModel(inputStream);\n\n//Creating a parser
-Parser parser = ParserFactory.create(model);\n\n//Parsing the sentence\nParse topParses[] = ParserTool.parseLine(sentence, parser, 1);`,
     'Chunking Sentences': `//Tokenizing the sentence\nWhitespaceTokenizer whitespaceTokenizer= WhitespaceTokenizer.INSTANCE;\nString[] tokens = whitespaceTokenizer.tokenize(sentence);\n
 //Generating the POS tags\nFile file = new File("C:/OpenNLP_models/en-pos-maxent.bin");\nPOSModel model = new POSModelLoader().load(file);\n\n//Constructing the tagger\nPOSTaggerME tagger = new POSTaggerME(model);
 \n//Generating tags from the tokens\nString[] tags = tagger.tag(tokens);\n\n//Loading the chunker model\nInputStream inputStream = new FileInputStream("C:/OpenNLP_models/en-chunker.bin");\nChunkerModel chunkerModel = new ChunkerModel(inputStream);

@@ -11,7 +11,8 @@ export class NlpAggregatorService {
         'Sentence Detection' : environment.serverUrl + '/sentences',
         'Tokenization' : environment.serverUrl + '/tokens',
         'Name Entity Recognition' : environment.serverUrl + '/NER',
-        'Finding Parts Of Speech' : environment.serverUrl + '/POSTags'
+        'Finding Parts Of Speech' : environment.serverUrl + '/POSTags',
+        'Chunking Sentences' : environment.serverUrl + '/chunks',
     }
 
     constructor(private http: HttpClient) {
